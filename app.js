@@ -62,6 +62,7 @@
 
 
 // Basic Routing
+/*
 var http = require('http');
 var fs = require('fs');
 
@@ -86,3 +87,16 @@ var server = http.createServer(function (req, res) {
 
 server.listen(3000, '127.0.0.1');
 console.log('Hello...')
+*/
+
+
+// Introduction to Express
+var express = require('express');
+var app = express();
+app.get('/', function (req, res) {
+    res.send('this is the homepage');
+});
+app.get('/contact', function (req, res) {
+    res.send('this is the contact page');
+});
+app.listen(3000);
